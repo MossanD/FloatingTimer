@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:outlineProvider="background"
+    android:layout_gravity="center"
+    android:id="@+id/frame"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/timer_text_view"
+            android:textSize="35dp"/>
+        <LinearLayout
+            android:id="@+id/liner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:elevation="5dp">
+        <com.moss.floatingtimer.MyNumberPicker
+            android:theme="@style/NumberPickerText"
+            android:layout_width="33dp"
+            android:layout_height="105dp"
+            android:id="@+id/hour_picker" />
+        <com.moss.floatingtimer.MyNumberPicker
+            android:theme="@style/NumberPickerText"
+            android:layout_width="33dp"
+            android:layout_height="105dp"
+            android:id="@+id/second_Picker"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"/>
+        <com.moss.floatingtimer.MyNumberPicker
+            android:theme="@style/NumberPickerText"
+            android:layout_width="33dp"
+            android:layout_height="105dp"
+            android:id="@+id/minute_picker" />
+        </LinearLayout>
+
+</FrameLayout>
