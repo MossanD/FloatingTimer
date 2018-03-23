@@ -24,6 +24,10 @@ public class FloatingTimerService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
 
+        if(mWindowManager!=null){
+            return START_REDELIVER_INTENT;
+        }
+
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
         mFloatingView = new FloatingTimerView(this);
